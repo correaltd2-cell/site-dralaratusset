@@ -1,7 +1,7 @@
 import {
   json, senhaCorreta, criarToken, tokenValido,
   listarPasta, lerArquivo, gravarArquivo, apagarArquivo,
-} from "./_lib.mjs";
+} from "../lib/comum.mjs";
 
 const PASTA_POSTS = "conteudo/posts";
 const PASTA_IMAGENS = "conteudo/imagens";

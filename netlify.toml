@@ -3,7 +3,6 @@
   publish = "dist"
 
 [build.environment]
-  PYTHON_VERSION = "3.13"
   NODE_VERSION = "22"
 
 [functions]
