@@ -1,0 +1,19 @@
+{
+  "site": "https://dralaratusset.com.br",
+  "nome": "Dra. Lara Tusset",
+  "profissao": "Dermatologista em Passo Fundo",
+  "crm": "CRM-RS 38472",
+  "rqe": "RQE 35948",
+  "bio": "Médica dermatologista (CRM-RS 38472 · RQE 35948). Pós-graduada em Dermatologia pelo Instituto de Dermatologia Prof. Rubem David Azulay, da Santa Casa do Rio de Janeiro, e membro da Sociedade Brasileira de Dermatologia. Atende em Passo Fundo, no Ed. Crediplan.",
+  "endereco": {
+    "rua": "Rua Uruguai, 2001, sala 807, Bloco A, Ed. Crediplan",
+    "bairro": "Centro",
+    "cidade": "Passo Fundo",
+    "uf": "RS"
+  },
+  "link_agendar": "https://wa.me/5554999999875",
+  "link_instagram": "https://www.instagram.com/dermato_laratusset/",
+  "foto_autora": "dra-lara-tusset.jpg",
+  "blog_titulo": "Pele saudável, <i>explicada</i> pela dermatologista",
+  "blog_descricao": "Textos da Dra. Lara Tusset, dermatologista em Passo Fundo, sobre dermatite, proteção solar, manchas, acne e prevenção do câncer de pele."
+}

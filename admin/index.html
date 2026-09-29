@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel do Blog · Dra. Lara Tusset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/admin/vendor/easymde/easymde.min.css">
+<link rel="stylesheet" href="/admin/vendor/font-awesome/css/font-awesome.min.css">
+<style>
+:root{--bg:#F4F3F0;--surface:#fff;--ink:#1D2837;--muted:#5D6674;--line:#E0DDD5;--sand:#8C7548;--sand-soft:#F0EBDF;
+--ok:#2F7A4F;--ok-soft:#E3F1E8;--warn:#9A6A12;--warn-soft:#F8EDD6;--bad:#B3261E;--bad-soft:#FBE4E2;
+--display:"Gilda Display",Georgia,serif;--body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body)}
+h1,h2{font-family:var(--display);font-weight:400;margin:0;line-height:1.15}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--sand)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.bar h1{font-size:30px}
+.bar small{display:block;font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);font-weight:600;margin-bottom:4px}
+.btn{border:0;border-radius:999px;padding:10px 20px;font-weight:600;cursor:pointer;background:var(--ink);color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{opacity:.9}
+.btn:disabled{opacity:.5;cursor:wait}
+.btn.sec{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.perigo{background:transparent;color:var(--bad);border:1px solid var(--bad-soft)}
+.btn.perigo.confirma{background:var(--bad);color:#fff}
+:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px}
+/* login */
+.login{max-width:380px;margin:12vh auto 0;padding:32px;display:flex;flex-direction:column;gap:16px}
+.login h1{font-size:28px}
+.login p{margin:0;color:var(--muted)}
+/* campos */
+label{display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:14px}
+label .dica{font-weight:400;color:var(--muted);font-size:13px}
+input[type=text],input[type=password],input[type=date],input[type=search],textarea,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+textarea{resize:vertical;min-height:72px}
+.contador{font-size:12px;color:var(--muted);align-self:flex-end;font-variant-numeric:tabular-nums}
+.contador.ruim{color:var(--bad)}
+/* lista */
+.filtros{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.filtros input{max-width:320px}
+.lista{list-style:none;margin:0;padding:0}
+.lista li{display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center;padding:14px 18px;border-top:1px solid var(--line);cursor:pointer}
+.lista li:first-child{border-top:0}
+.lista li:hover{background:var(--sand-soft)}
+.lista .data{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px}
+.lista .tit{font-weight:500}
+.lista .cat{display:block;font-size:13px;color:var(--muted)}
+.chip{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.chip.pub{background:var(--ok-soft);color:var(--ok)}
+.chip.agd{background:var(--warn-soft);color:var(--warn)}
+.chip.ras{background:var(--line);color:var(--muted)}
+.vazio{padding:32px;text-align:center;color:var(--muted)}
+/* editor */
+.editor{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+.principal{display:flex;flex-direction:column;gap:18px}
+.titulo-input{font-family:var(--display);font-size:28px!important;padding:14px 16px!important}
+.lado{display:flex;flex-direction:column;gap:16px;position:sticky;top:16px}
+.lado .card{padding:18px;display:flex;flex-direction:column;gap:14px}
+.lado h2{font-size:18px}
+.linha{display:flex;gap:10px;flex-wrap:wrap}
+.check{flex-direction:row;align-items:center;gap:8px;font-weight:500}
+.capa-prev{border-radius:10px;aspect-ratio:16/9;object-fit:cover;width:100%;background:var(--sand-soft)}
+.seo{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.seo li{display:flex;gap:8px;align-items:flex-start}
+.seo li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;margin-top:4px;background:var(--line)}
+.seo li.ok::before{background:var(--ok)}
+.seo li.meio::before{background:#D9A23A}
+.google{border:1px solid var(--line);border-radius:10px;padding:12px;font-family:Arial,sans-serif}
+.google .u{color:#202124;font-size:12px}
+.google .t{color:#1a0dab;font-size:17px;line-height:1.3;margin:2px 0}
+.google .d{color:#4d5156;font-size:13px}
+.EasyMDEContainer .CodeMirror{border-radius:0 0 10px 10px;border-color:var(--line);min-height:420px;font-size:15px}
+.editor-toolbar{border-radius:10px 10px 0 0;border-color:var(--line);background:var(--surface)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 20px;border-radius:12px;max-width:calc(100% - 32px);box-shadow:0 8px 24px rgba(0,0,0,.18);z-index:50}
+.toast.erro{background:var(--bad)}
+.ajuda{font-size:13px;color:var(--muted);margin:0}
+@media (max-width:860px){.editor{grid-template-columns:1fr}.lado{position:static}.lista li{grid-template-columns:1fr auto}.lista .data{grid-column:1/-1;order:-1;font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <form id="tela-login" class="card login" hidden>
+    <h1>Painel do Blog</h1>
+    <p>Digite a senha para escrever e publicar textos no site.</p>
+    <label>Senha<input type="password" id="senha" autocomplete="current-password" required></label>
+    <button class="btn" type="submit" id="entrar">Entrar</button>
+  </form>
+
+  <section id="tela-lista" hidden>
+    <div class="bar">
+      <h1><small>Painel do Blog</small>Seus textos</h1>
+      <div class="linha">
+        <a class="btn sec" href="/blog/" target="_blank" rel="noopener">Ver blog</a>
+        <button class="btn" type="button" id="novo">Novo post</button>
+      </div>
+    </div>
+    <div class="filtros"><input type="search" id="busca" placeholder="Buscar pelo título"></div>
+    <div class="card"><ul class="lista" id="lista"></ul></div>
+    <p class="ajuda" style="margin-top:14px">Posts com data futura ficam agendados e entram no ar sozinhos no dia, por volta das 6h.</p>
+  </section>
+
+  <section id="tela-editor" hidden>
+    <div class="bar">
+      <button class="btn sec" type="button" id="voltar">← Voltar para a lista</button>
+      <div class="linha">
+        <button class="btn perigo" type="button" id="excluir" hidden>Excluir</button>
+        <button class="btn" type="button" id="salvar">Salvar</button>
+      </div>
+    </div>
+    <div class="editor">
+      <div class="principal">
+        <label>Título<input class="titulo-input" type="text" id="f-titulo" placeholder="Ex.: Dermatite: o que é e como tratar"></label>
+        <div id="area-texto"><textarea id="f-corpo"></textarea></div>
+        <p class="ajuda">Use <strong>H2</strong> (##) para as seções. Para perguntas frequentes, crie a seção "## Perguntas frequentes" e escreva cada pergunta como <strong>H3</strong> (###). O Google pode mostrar essas perguntas na busca.</p>
+      </div>
+      <aside class="lado">
+        <div class="card">
+          <h2>Publicação</h2>
+          <label>Data de publicação<input type="date" id="f-publicacao"></label>
+          <label class="check"><input type="checkbox" id="f-rascunho"> Salvar como rascunho (não publica)</label>
+          <label>Categoria<input type="text" id="f-categoria" list="categorias" placeholder="Ex.: Skincare"></label>
+          <datalist id="categorias"><option>Dermatologia clínica</option><option>Skincare</option><option>Proteção solar</option><option>Manchas</option><option>Acne</option><option>Prevenção</option><option>Estética</option><option>Cabelos e unhas</option></datalist>
+        </div>
+        <div class="card">
+          <h2>Imagem de capa</h2>
+          <img class="capa-prev" id="capa-prev" alt="" hidden>
+          <div class="linha">
+            <label class="btn sec" style="flex-direction:row;cursor:pointer">Escolher imagem<input type="file" id="f-capa" accept="image/*" hidden></label>
+            <button class="btn sec" type="button" id="tirar-capa" hidden>Remover</button>
+          </div>
+          <p class="ajuda">Opcional. A imagem é reduzida automaticamente antes de enviar.</p>
+        </div>
+        <div class="card">
+          <h2>Google</h2>
+          <label>Palavra-chave principal<span class="dica">O termo que as pessoas digitam no Google.</span><input type="text" id="f-palavra" placeholder="Ex.: dermatite"></label>
+          <label>Palavras secundárias<span class="dica">Separe por vírgula.</span><input type="text" id="f-secundarias"></label>
+          <label>Descrição para o Google<textarea id="f-descricao" maxlength="200"></textarea><span class="contador" id="cont-desc">0/155</span></label>
+          <label>Endereço da página<span class="dica">dralaratusset.com.br/blog/…</span><input type="text" id="f-slug"></label>
+          <div class="google" aria-label="Prévia no Google">
+            <div class="u" id="g-url">dralaratusset.com.br › blog</div>
+            <div class="t" id="g-tit">Título do post</div>
+            <div class="d" id="g-desc">Descrição do post.</div>
+          </div>
+          <ul class="seo" id="seo"></ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="/admin/vendor/easymde/easymde.min.js"></script>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const API = "/api/admin";
+  const hojeISO = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+  let token = null, posts = [], atual = null, mde = null, slugManual = false;
+  // Modo demonstração: fora do domínio oficial o painel salva só neste navegador.
+  const DEMO = /\.vercel\.app$/.test(location.hostname);
+  let demoDb = null;
+  async function demoApi(caminho, opcoes = {}) {
+    if (!demoDb) {
+      try { demoDb = JSON.parse(localStorage.getItem("demo-posts") || "null"); } catch (e) {}
+      if (!demoDb) demoDb = await (await fetch("/admin/demo-posts.json")).json();
+    }
+    const guardar = () => { try { localStorage.setItem("demo-posts", JSON.stringify(demoDb)); } catch (e) {} };
+    const corpo = opcoes.body ? JSON.parse(opcoes.body) : {};
+    if (caminho === "/login") return { token: "demo" };
+    if (caminho === "/posts" && !opcoes.method) return { posts: Object.entries(demoDb).map(([arquivo, p]) => ({
+      arquivo, sha: "demo", titulo: p.meta.titulo, slug: p.meta.slug, publicacao: p.meta.publicacao,
+      categoria: p.meta.categoria, rascunho: Boolean(p.meta.rascunho) })).sort((a, b) => String(b.publicacao).localeCompare(String(a.publicacao))) };
+    if (caminho === "/posts" && opcoes.method === "PUT") {
+      if (!corpo.meta.titulo || !corpo.meta.slug) throw new Error("Preencha o título.");
+      const novo = corpo.meta.slug + ".md";
+      if (corpo.arquivo && corpo.arquivo !== novo) delete demoDb[corpo.arquivo];
+      demoDb[novo] = { meta: corpo.meta, corpo: corpo.corpo }; guardar();
+      return { ok: true, arquivo: novo, sha: "demo" };
+    }
+    const m = caminho.match(/^\/posts\/([^?]+)/);
+    if (m && opcoes.method === "DELETE") { delete demoDb[m[1]]; guardar(); return { ok: true }; }
+    if (m) { const p = demoDb[m[1]]; return { arquivo: m[1], sha: "demo", meta: p.meta, corpo: p.corpo }; }
+    if (caminho === "/imagens") return { ok: true, url: corpo.dados };
+    throw new Error("Indisponível na demonstração.");
+  }
+  try { token = sessionStorage.getItem("blog-token"); } catch (e) {}
+
+  function toast(msg, erro) {
+    const t = $("toast"); t.textContent = msg; t.className = "toast" + (erro ? " erro" : ""); t.hidden = false;
+    clearTimeout(toast.t); toast.t = setTimeout(() => (t.hidden = true), erro ? 7000 : 4500);
+  }
+
+  async function api(caminho, opcoes = {}) {
+    if (DEMO) return demoApi(caminho, opcoes);
+    const r = await fetch(API + caminho, {
+      ...opcoes,
+      headers: { "content-type": "application/json", ...(token ? { authorization: "Bearer " + token } : {}) },
+    });
+    const dados = await r.json().catch(() => ({ erro: "Resposta inválida do servidor." }));
+    if (r.status === 401 && caminho !== "/login") { sair(); throw new Error(dados.erro); }
+    if (!r.ok) throw new Error(dados.erro || "Erro " + r.status);
+    return dados;
+  }
+
+  function mostrar(tela) {
+    ["tela-login", "tela-lista", "tela-editor"].forEach((id) => ($(id).hidden = id !== tela));
+    window.scrollTo(0, 0);
+  }
+
+  function sair() {
+    token = null; try { sessionStorage.removeItem("blog-token"); } catch (e) {}
+    mostrar("tela-login"); $("senha").focus();
+  }
+
+  $("tela-login").addEventListener("submit", async (ev) => {
+    ev.preventDefault(); $("entrar").disabled = true;
+    try {
+      const { token: t } = await api("/login", { method: "POST", body: JSON.stringify({ senha: $("senha").value }) });
+      token = t; try { sessionStorage.setItem("blog-token", t); } catch (e) {}
+      $("senha").value = ""; await abrirLista();
+    } catch (e) { toast(e.message, true); } finally { $("entrar").disabled = false; }
+  });
+
+  // ---- Lista ----
+  function status(p) {
+    if (p.rascunho) return ["ras", "Rascunho"];
+    if (p.publicacao > hojeISO()) return ["agd", "Agendado"];
+    return ["pub", "Publicado"];
+  }
+  const dataBR = (d) => d ? d.split("-").reverse().join("/") : "";
+
+  function desenharLista() {
+    const q = $("busca").value.trim().toLowerCase();
+    const itens = posts.filter((p) => p.titulo.toLowerCase().includes(q));
+    $("lista").innerHTML = itens.length ? "" : '<li class="vazio">Nenhum post encontrado.</li>';
+    for (const p of itens) {
+      const [cls, rot] = status(p);
+      const li = document.createElement("li"); li.tabIndex = 0;
+      li.innerHTML = `<span class="data"></span><span><span class="tit"></span><span class="cat"></span></span><span class="chip ${cls}">${rot}</span>`;
+      li.querySelector(".data").textContent = dataBR(p.publicacao);
+      li.querySelector(".tit").textContent = p.titulo;
+      li.querySelector(".cat").textContent = p.categoria || "";
+      li.onclick = () => abrirPost(p.arquivo);
+      li.onkeydown = (e) => { if (e.key === "Enter") abrirPost(p.arquivo); };
+      $("lista").appendChild(li);
+    }
+  }
+
+  async function abrirLista() {
+    mostrar("tela-lista");
+    $("lista").innerHTML = '<li class="vazio">Carregando…</li>';
+    try { posts = (await api("/posts")).posts; desenharLista(); }
+    catch (e) { $("lista").innerHTML = ""; toast(e.message, true); }
+  }
+  $("busca").addEventListener("input", desenharLista);
+
+  // ---- Editor ----
+  const slugify = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 70).replace(/-$/, "");
+
+  function garantirEditor() {
+    if (mde) return;
+    if (!window.EasyMDE) { // editor simples, caso o script do editor não carregue
+      const ta = $("f-corpo"); ta.style.minHeight = "420px"; ta.addEventListener("input", atualizarSeo);
+      mde = { value: (v) => (v === undefined ? ta.value : (ta.value = v)), codemirror: { refresh() {} } };
+      return;
+    }
+    mde = new EasyMDE({
+      element: $("f-corpo"), spellChecker: false, status: false, autoDownloadFontAwesome: false,
+      placeholder: "Escreva o texto aqui…",
+      toolbar: ["heading-2", "heading-3", "bold", "italic", "|", "unordered-list", "ordered-list", "quote", "|",
+        "link", "upload-image", "table", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
+      uploadImage: true, imageAccept: "image/png, image/jpeg, image/webp",
+      imageUploadFunction: async (arquivo, ok, falha) => {
+        try { ok((await enviarImagem(arquivo)).url); } catch (e) { falha(e.message); }
+      },
+    });
+    mde.codemirror.on("change", atualizarSeo);
+  }
+
+  function preencher(meta, corpo) {
+    $("f-titulo").value = meta.titulo || "";
+    $("f-slug").value = meta.slug || "";
+    $("f-publicacao").value = meta.publicacao || hojeISO();
+    $("f-rascunho").checked = Boolean(meta.rascunho);
+    $("f-categoria").value = meta.categoria || "";
+    $("f-palavra").value = meta.palavra_chave || "";
+    $("f-secundarias").value = (meta.palavras_secundarias || []).join(", ");
+    $("f-descricao").value = meta.meta_descricao || "";
+    definirCapa(meta.imagem || "");
+    garantirEditor(); mde.value(corpo || "");
+    setTimeout(() => mde.codemirror.refresh(), 0);
+    atualizarSeo();
+  }
+
+  function definirCapa(url, previa) {
+    $("capa-prev").dataset.url = url; $("capa-prev").hidden = !url; $("tirar-capa").hidden = !url;
+    if (url) $("capa-prev").src = previa || url;
+  }
+
+  async function abrirPost(arquivo) {
+    try {
+      const p = await api("/posts/" + arquivo);
+      atual = { arquivo: p.arquivo, sha: p.sha }; slugManual = true;
+      $("excluir").hidden = false; resetExcluir();
+      mostrar("tela-editor"); preencher(p.meta, p.corpo);
+    } catch (e) { toast(e.message, true); }
+  }
+
+  $("novo").onclick = () => {
+    atual = null; slugManual = false; $("excluir").hidden = true;
+    mostrar("tela-editor");
+    preencher({ publicacao: hojeISO() }, "Parágrafo de abertura…\n\n## Primeira seção\n\nTexto…\n\n## Perguntas frequentes\n\n### Pergunta?\n\nResposta.\n\n## Quando procurar a dermatologista\n\nTexto com convite para agendar a consulta.");
+    $("f-titulo").focus();
+  };
+  $("voltar").onclick = abrirLista;
+
+  $("f-titulo").addEventListener("input", () => { if (!slugManual) $("f-slug").value = slugify($("f-titulo").value); atualizarSeo(); });
+  $("f-slug").addEventListener("input", () => { slugManual = true; atualizarSeo(); });
+  ["f-descricao", "f-palavra"].forEach((id) => $(id).addEventListener("input", atualizarSeo));
+
+  function atualizarSeo() {
+    const tit = $("f-titulo").value.trim(), desc = $("f-descricao").value.trim(), kw = $("f-palavra").value.trim().toLowerCase();
+    const corpo = mde ? mde.value() : "", slug = $("f-slug").value.trim();
+    const palavras = corpo.split(/\s+/).filter(Boolean).length;
+    const inicio = corpo.split(/\s+/).slice(0, 100).join(" ").toLowerCase();
+    $("cont-desc").textContent = desc.length + "/155";
+    $("cont-desc").className = "contador" + (desc.length > 155 ? " ruim" : "");
+    $("g-url").textContent = "dralaratusset.com.br › blog › " + (slug || "…");
+    $("g-tit").textContent = (tit || "Título do post") + " | Dra. Lara Tusset";
+    $("g-desc").textContent = desc || "Escreva a descrição que aparece no Google.";
+    const itens = [
+      [kw && tit.toLowerCase().includes(kw), "Palavra-chave no título"],
+      [kw && inicio.includes(kw), "Palavra-chave no primeiro parágrafo"],
+      [kw && /^##\s.*$/m.test(corpo) && corpo.split("\n").some((l) => l.startsWith("## ") && l.toLowerCase().includes(kw)), "Palavra-chave em um subtítulo (##)"],
+      [desc.length >= 120 && desc.length <= 155 ? true : desc.length ? "meio" : false, "Descrição entre 120 e 155 caracteres"],
+      [palavras >= 800 ? true : palavras >= 400 ? "meio" : false, `Texto com pelo menos 800 palavras (${palavras})`],
+      [/^## Perguntas frequentes/m.test(corpo), "Seção de perguntas frequentes"],
+      [/\]\(\/blog\//.test(corpo), "Link para outro post do blog"],
+    ];
+    $("seo").innerHTML = "";
+    for (const [v, txt] of itens) {
+      const li = document.createElement("li"); li.textContent = txt;
+      li.className = v === true ? "ok" : v === "meio" ? "meio" : ""; $("seo").appendChild(li);
+    }
+  }
+
+  // ---- Imagens ----
+  function reduzir(arquivo, max = 1600) {
+    return new Promise((ok, falha) => {
+      const img = new Image(), url = URL.createObjectURL(arquivo);
+      img.onload = () => {
+        const esc = Math.min(1, max / Math.max(img.width, img.height));
+        const c = document.createElement("canvas");
+        c.width = Math.round(img.width * esc); c.height = Math.round(img.height * esc);
+        const ctx = c.getContext("2d"); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+        ok(c.toDataURL("image/jpeg", 0.82));
+      };
+      img.onerror = () => falha(new Error("Não foi possível ler essa imagem."));
+      img.src = url;
+    });
+  }
+  async function enviarImagem(arquivo) {
+    toast("Enviando imagem…");
+    const dados = await reduzir(arquivo);
+    const r = await api("/imagens", { method: "POST", body: JSON.stringify({ nome: arquivo.name, dados }) });
+    return { ...r, dados };
+  }
+  $("f-capa").addEventListener("change", async (e) => {
+    const f = e.target.files[0]; e.target.value = ""; if (!f) return;
+    try { const r = await enviarImagem(f); definirCapa(r.url, r.dados); toast("Imagem enviada. Clique em Salvar para aplicar."); }
+    catch (err) { toast(err.message, true); }
+  });
+  $("tirar-capa").onclick = () => definirCapa("");
+
+  // ---- Salvar / excluir ----
+  $("salvar").onclick = async () => {
+    const meta = {
+      titulo: $("f-titulo").value.trim(), slug: $("f-slug").value.trim(),
+      publicacao: $("f-publicacao").value, rascunho: $("f-rascunho").checked,
+      categoria: $("f-categoria").value.trim(), palavra_chave: $("f-palavra").value.trim(),
+      palavras_secundarias: $("f-secundarias").value, meta_descricao: $("f-descricao").value.trim(),
+      imagem: $("capa-prev").dataset.url || "",
+    };
+    $("salvar").disabled = true;
+    try {
+      const r = await api("/posts", { method: "PUT", body: JSON.stringify({ ...(atual || {}), meta, corpo: mde.value() }) });
+      atual = { arquivo: r.arquivo, sha: r.sha }; $("excluir").hidden = false;
+      toast(meta.rascunho ? "Rascunho salvo." : meta.publicacao > hojeISO()
+        ? `Salvo e agendado para ${dataBR(meta.publicacao)}.`
+        : "Salvo. O site atualiza em cerca de 2 minutos.");
+    } catch (e) { toast(e.message, true); } finally { $("salvar").disabled = false; }
+  };
+
+  function resetExcluir() { $("excluir").classList.remove("confirma"); $("excluir").textContent = "Excluir"; }
+  $("excluir").onclick = async () => {
+    const b = $("excluir");
+    if (!b.classList.contains("confirma")) {
+      b.classList.add("confirma"); b.textContent = "Clique de novo para excluir";
+      setTimeout(resetExcluir, 4000); return;
+    }
+    try {
+      await api(`/posts/${atual.arquivo}?sha=${encodeURIComponent(atual.sha)}`, { method: "DELETE" });
+      toast("Post excluído."); await abrirLista();
+    } catch (e) { toast(e.message, true); }
+  };
+
+  if (DEMO) {
+    const aviso = document.createElement("p");
+    aviso.style.cssText = "margin:0 0 20px;padding:10px 14px;border-radius:10px;background:var(--warn-soft);color:var(--warn);font-size:14px";
+    aviso.textContent = "Demonstração: entre com qualquer senha. O que você salvar fica só neste navegador; no site oficial, o post vai ao ar sozinho.";
+    document.querySelector(".wrap").prepend(aviso);
+  }
+  token ? abrirLista() : sair();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<style>
+.home-blog{padding:120px 80px;background:var(--bg)}
+.home-blog .blog-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.home-blog .blog-card{display:flex;flex-direction:column;gap:10px;padding:30px 28px;background:var(--warm-white);border:1px solid var(--border);border-radius:16px;text-decoration:none;color:var(--ink);transition:all .5s cubic-bezier(.16,1,.3,1)}
+.home-blog .blog-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.home-blog .blog-card img{border-radius:10px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.home-blog .blog-card-meta{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:500}
+.home-blog .blog-card h3{font-family:'Playfair Display',serif;font-weight:400;font-size:23px;line-height:1.25}
+.home-blog .blog-card p{font-size:15px;line-height:1.6;color:var(--ink-muted);font-weight:300}
+.home-blog-mais{margin-top:32px;text-align:center}
+.home-blog-mais a{color:var(--accent-hover);font-size:14px;letter-spacing:.05em;text-transform:uppercase;font-weight:500;text-decoration:none}
+@media (max-width:1024px){.home-blog{padding:80px 32px}.home-blog .blog-grade{grid-template-columns:1fr}}
+</style>
+<section class="home-blog" id="blog">
+  <div class="section-head reveal">
+    <div class="section-head-left">
+      <div class="tag"><span class="tag-dot"></span><span class="tag-text">Blog</span></div>
+      <h2>Informação para<br><i>cuidar da pele</i></h2>
+    </div>
+    <div class="section-head-right">Textos da Dra. Lara sobre as dúvidas mais comuns do consultório.</div>
+  </div>
+  <div class="blog-grade">{{CARDS}}</div>
+  <p class="home-blog-mais"><a href="/blog/">Ver todos os textos →</a></p>
+</section>
