@@ -2,11 +2,11 @@
 titulo: "Rotina de skincare de primavera: o que mudar na troca de estação"
 slug: "rotina-skincare-primavera"
 publicacao: "2026-09-30"
-palavra_chave: "rotina de skincare de primavera"
-palavras_secundarias: ["skincare troca de estação", "cuidados com a pele na primavera", "pele oleosa na primavera", "hidratante leve", "protetor solar primavera"]
-meta_descricao: "Rotina de skincare de primavera: saiba o que ajustar na limpeza, hidratação e proteção solar na troca de estação. Dicas da dermatologista em Passo Fundo."
 categoria: "Skincare"
-tempo_leitura: "6 min"
+palavra_chave: "rotina de skincare de primavera"
+palavras_secundarias: ["skincare troca de estação","cuidados com a pele na primavera","pele oleosa na primavera","hidratante leve","protetor solar primavera"]
+meta_descricao: "Rotina de skincare de primavera: saiba o que ajustar na limpeza, hidratação e proteção solar na troca de estação. Dicas da dermatologista em Passo Fundo."
+atualizado: "2026-10-07"
 ---
 
 # Rotina de skincare de primavera: o que mudar na troca de estação
@@ -15,7 +15,7 @@ Você também sente que a pele "não sabe" em que estação está? Aqui em Passo
 
 ## Por que a pele muda na troca de estação
 
-A pele é um órgão vivo, que reage ao ambiente o tempo todo. Quando saímos do inverno, ela geralmente vem de meses de ar mais seco, banhos quentes e aquecedor ligado — uma combinação que fragiliza a barreira cutânea. De repente, a temperatura sobe, a umidade muda e o suor aparece.
+A pele é um órgão, que reage ao ambiente o tempo todo. Quando saímos do inverno, ela geralmente vem de meses de ar mais seco, banhos quentes e aquecedor ligado — uma combinação que fragiliza a barreira cutânea. De repente, a temperatura sobe, a umidade muda e o suor aparece.
 
 O resultado, que vejo muito no consultório nessa época, costuma ser uma mistura:
 
@@ -48,7 +48,7 @@ Não existe rotina única, mas existe uma base. A ideia é **simplificar e ajust
 
 No inverno, muita gente troca o sabonete por algo mais cremoso. Com a chegada do calor, quem tem pele mista ou oleosa pode voltar a sentir necessidade de uma limpeza um pouco mais eficaz — em gel ou espuma, por exemplo.
 
-Mas atenção: **limpar demais também é um problema**. Lavar o rosto muitas vezes ao dia ou usar produtos muito adstringentes pode provocar o efeito rebote, deixando a pele ainda mais oleosa e irritada. Em geral, duas vezes ao dia é suficiente. Água muito quente também deve ser evitada.
+Mas atenção: **limpar demais também é um problema**. Lavar o rosto muitas vezes ao dia ou usar produtos muito adstringentes pode provocar o efeito rebote, deixando a pele ainda mais oleosa e irritada. Em geral, duas vezes ao dia é suficiente. Água quente também deve ser evitada.
 
 Se a oleosidade e as espinhas são a sua principal queixa, vou falar disso com mais detalhes no post sobre [pele oleosa e acne no calor](/blog/pele-oleosa-acne-calor).
 
@@ -71,7 +71,7 @@ A primavera é a estação em que o índice ultravioleta começa a subir de form
 
 Algumas orientações práticas:
 
-- Use protetor solar **todos os dias**, mesmo em casa perto de janelas ou em dias nublados;
+- Use protetor solar **todos os dias**, mesmo em casa ou em dias nublados;
 - Aplique uma **quantidade generosa** — a maioria das pessoas usa bem menos do que o necessário;
 - **Reaplique** ao longo do dia, principalmente se estiver ao ar livre, suando ou após entrar na água;
 - Complete com chapéu, óculos de sol e sombra nos horários de sol mais forte.
@@ -103,7 +103,3 @@ Depende do ativo, da concentração e da sua exposição ao sol. Alguns podem se
 ## Quando procurar a dermatologista
 
 Se a sua pele está reagindo de forma diferente nesta troca de estação — com mais espinhas, manchas, vermelhidão, coceira ou descamação —, ou se você simplesmente não sabe por onde começar, uma avaliação ajuda muito. Uma **rotina de skincare de primavera** pensada para a sua pele, e não para a de outra pessoa, costuma ser mais simples e mais eficaz. Se quiser, será um prazer receber você no meu consultório no Centro de Passo Fundo para montarmos juntos esse cuidado. Veja também [quando ir ao dermatologista](/blog/quando-ir-ao-dermatologista).
-
----
-*Dra. Lara Tusset — Dermatologista | CRM-RS 38472 · RQE 35948*
-*Este conteúdo é informativo e não substitui a consulta médica.*
