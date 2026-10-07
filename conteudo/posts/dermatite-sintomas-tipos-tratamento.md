@@ -2,16 +2,16 @@
 titulo: "Dermatite: o que é, tipos, sintomas e por que piora na troca de estação"
 slug: "dermatite-sintomas-tipos-tratamento"
 publicacao: "2026-09-24"
-palavra_chave: "dermatite"
-palavras_secundarias: ["dermatite atópica", "dermatite de contato", "dermatite seborreica", "pele coçando e descamando", "tratamento para dermatite"]
-meta_descricao: "Pele coçando, vermelha e descamando? Entenda o que é dermatite, os tipos mais comuns, por que piora na primavera e como é o tratamento."
 categoria: "Dermatologia clínica"
-tempo_leitura: "7 min"
+palavra_chave: "dermatite"
+palavras_secundarias: ["dermatite atópica","dermatite de contato","dermatite seborreica","pele coçando e descamando","tratamento para dermatite"]
+meta_descricao: "Pele coçando, vermelha e descamando? Entenda o que é dermatite, os tipos mais comuns, por que piora na primavera e como é o tratamento."
+atualizado: "2026-10-07"
 ---
 
 # Dermatite: o que é, tipos, sintomas e por que piora na troca de estação
 
-Coceira que não passa, pele vermelha, áspera, às vezes descamando ou até com pequenas bolhas. Se você se identificou, é bem possível que esteja lidando com uma **dermatite** — uma das queixas que mais recebo no consultório, principalmente agora, na troca do inverno para a primavera.
+Coceira que não passa, pele vermelha, áspera, às vezes descamando ou até com pequenas bolhas. Se você se identificou, é bem possível que esteja lidando com uma **dermatite** — uma das queixas que mais recebo no consultório.
 
 A boa notícia é que dermatite tem controle. O primeiro passo é entender qual é o tipo, o que está provocando as crises e como cuidar da pele no dia a dia. É isso que vou explicar aqui.
 
@@ -27,7 +27,7 @@ Na maioria das vezes, por trás da dermatite existe uma **barreira cutânea frag
 
 ### Dermatite atópica
 
-É a forma que muita gente conhece como "eczema". Costuma começar na infância, mas pode persistir ou aparecer na vida adulta. Está frequentemente associada a rinite alérgica e asma, na própria pessoa ou na família.
+Costuma começar na infância, mas pode persistir ou aparecer na vida adulta. Está frequentemente associada a rinite alérgica e asma, na própria pessoa ou na família.
 
 - Pele muito seca e coceira intensa, que costuma piorar à noite;
 - Em bebês, aparece mais no rosto e na parte externa de braços e pernas;
@@ -56,10 +56,10 @@ Existem ainda a dermatite de fraldas nos bebês, a disidrose (bolhinhas nas mão
 Aqui no Sul, a transição do inverno para a primavera é especialmente desafiadora para a pele. Em um mesmo dia, saímos de manhãs geladas para tardes quentes em Passo Fundo — e a pele sente essa montanha-russa.
 
 - **Variação brusca de temperatura e umidade:** a pele não tem tempo de se adaptar, e a barreira cutânea se fragiliza.
-- **Herança do inverno:** banhos quentes e demorados, aquecedores e roupas de lã deixam a pele ressecada e mais vulnerável quando a primavera chega.
+- **Herança do inverno:** banhos quentes e demorados, aquecedores e roupas de lã deixam a pele ressecada e mais vulnerável.
 - **Pólen e alergias respiratórias:** a primavera aumenta as crises de rinite, e quem tem dermatite atópica frequentemente sente a pele piorar junto.
 - **Suor:** com os primeiros dias de calor, o suor nas dobras irrita a pele de quem já é sensível.
-- **Mais tempo ao ar livre:** mais contato com plantas, grama, protetores solares e repelentes novos — possíveis gatilhos de dermatite de contato.
+- **Mais tempo ao ar livre:** mais contato com plantas, grama, protetores solares e repelentes novos — possíveis gatilhos para dermatites.
 
 ## Como é feito o diagnóstico
 
@@ -79,7 +79,7 @@ Um alerta que faço com carinho: **evite usar pomadas por conta própria**, espe
 
 ## Cuidados diários para quem tem dermatite
 
-- **Banhos mornos e rápidos**, de até 5 a 10 minutos. Água muito quente remove a oleosidade natural da pele.
+- **Banhos mornos e rápidos** Água muito quente remove a oleosidade natural da pele.
 - **Sabonete suave**, de preferência syndet ou sabonete para pele sensível, aplicado só onde precisa.
 - **Seque sem esfregar**, com leves toques da toalha.
 - **Hidrate em até 3 minutos após o banho**, com a pele ainda levemente úmida.
@@ -115,7 +115,3 @@ O estresse não é a causa única, mas é um gatilho importante para crises, pri
 Se a coceira está atrapalhando o seu sono, se as lesões não melhoram com hidratação, se estão se espalhando, apresentam secreção ou crostas amareladas, ou se as crises estão cada vez mais frequentes, é hora de buscar avaliação. Quanto antes identificamos o tipo de dermatite e os gatilhos, mais rápido conseguimos devolver o conforto para a sua pele.
 
 Aqui no consultório, em Passo Fundo, faço a avaliação completa e monto um plano de cuidados adequado à sua pele e à sua rotina. E para aproveitar a troca de estação com a pele em dia, vale ler também sobre a [rotina de skincare de primavera](/blog/rotina-skincare-primavera).
-
----
-*Dra. Lara Tusset — Dermatologista | CRM-RS 38472 · RQE 35948*
-*Este conteúdo é informativo e não substitui a consulta médica.*
