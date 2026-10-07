@@ -1,12 +1,12 @@
 ---
 titulo: "Protetor solar em dias nublados e no frio: precisa mesmo?"
 slug: "protetor-solar-dias-nublados"
-publicacao: "2026-10-07"
-palavra_chave: "protetor solar em dias nublados"
-palavras_secundarias: ["protetor solar no frio", "raios UVA atravessam nuvens", "índice UV", "protetor solar dentro de casa", "protetor solar no inverno"]
-meta_descricao: "Protetor solar em dias nublados e no frio: entenda por que o UV atravessa nuvens e vidro e como se proteger na primavera em Passo Fundo."
+publicacao: "2026-10-08"
 categoria: "Proteção solar"
-tempo_leitura: "6 min"
+palavra_chave: "protetor solar em dias nublados"
+palavras_secundarias: ["protetor solar no frio","raios UVA atravessam nuvens","índice UV","protetor solar dentro de casa","protetor solar no inverno"]
+meta_descricao: "Protetor solar em dias nublados e no frio: entenda por que o UV atravessa nuvens e vidro e como se proteger na primavera em Passo Fundo."
+atualizado: "2026-10-06"
 ---
 
 # Protetor solar em dias nublados e no frio: precisa mesmo?
@@ -92,7 +92,3 @@ Não. Suor, oleosidade, atrito e água removem o produto ao longo do dia, indepe
 ## Quando procurar a dermatologista
 
 Se você percebe manchas novas, pintas que mudaram de aspecto, feridas que não cicatrizam ou tem dificuldade de encontrar um protetor que se adapte à sua pele, vale fazer uma avaliação. Entender por que usar **protetor solar em dias nublados** e frios é o começo; o próximo passo é encontrar a proteção certa para o seu tipo de pele e sua rotina. Se quiser, agende uma consulta no meu consultório no Centro de Passo Fundo — vamos conversar com calma sobre o que faz sentido para você. Aproveite também para conhecer os [sinais de alerta do câncer de pele e como fazer o autoexame](/blog/cancer-de-pele-sinais-autoexame).
-
----
-*Dra. Lara Tusset — Dermatologista | CRM-RS 38472 · RQE 35948*
-*Este conteúdo é informativo e não substitui a consulta médica.*
